@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+    <meta charset='utf-8'>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    </head>
+    <body style="padding-top:50px;">
+
+        <header class="navbar navbar-expand-md navbar-light fixed-top bg-light" role="navigation">
+            <a class="navbar-brand" href="index.html">JSmartable</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-collapse" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Getting Started</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#example">Example</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#usage">Usage</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="#options">Options</a>
+                        </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/d4v1dm013/jsmartable" target="_blank">
+                            <i class="fab fa-github text-dark"></i>
+                            GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <div class="container-fluid bg-dark text-center p-5 text-light">
+            <h1>JSmartable</h1>
+            <p>Jquery free plugin to provide dynamic collapsable responsive table</p>
+
+            <a href="jsmartable.js" class="btn btn-outline-info btn-lg mb-4 text-light" target="_blank"><i class="fa fa-download"></i> Download v1.0</a>
+        </div>
+
+
+        <div class="container">
+        
+            <h2 class="border-bottom pb-3 mt-5 mb-4">Getting Started</h2>
+            
+            <h3>Quick start</h3>
+            
+            <p>
+                JSmartable is a Jquery free plugin to provide dynamic collapsable responsive table. You can choose a specific breakpoint for each column 
+                you want to hide sor the specified breakpoint. It's very simple to use, and requires only jQuery v1.9.1+, Bootstrap CSS and Fontawesome v4 or v5.
+            </p>
+
+            <p>Several quick start options are availables:</p>
+
+            <ul>
+                <li>Clone the repo: <code>git clone https://github.com/d4v1dm013/jsmartable</code></li>
+                <li>Install with <span class="text-info">npm</span>: <code>npm install jsmartable</code></li>
+                <li>Install with <span class="text-info">yarn</span>: <code>yarn add jsmartable</code></li>
+            </ul>
+            
+            <pre class="highlight">
+<code class="html hljs xml">
+<span class="hljs-comment">&lt;!-- Latest compiled and minified Bootstrap CSS --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Latest compiled and minified fontawesome CSS --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- Latest compiled and minified Jquery --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://code.jquery.com/jquery-3.2.1.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+                
+<span class="hljs-comment">&lt;!-- Latest compiled and minified Bootstrap --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+                
+<span class="hljs-comment">&lt;!-- JSmartable --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"//path/jsmartable.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code>
+            </pre>
+
+            <script src="" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+            <h2 class="border-bottom pb-3 mt-5 mb-3"><a name="example" class="text-dark">Example</a></h2>
+
+            <p>Below a simple example from a basic table that contain a <code>thead</code> section and a <code>tbody</code> section.</p>
+
+            <table class="table mt-4 jsmartable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th data-breakpoint="xs">1 Column</th>
+                            <th>2 Column</th>
+                            <th data-breakpoint="sm">3 Column</th>
+                            <th data-breakpoint="md">4 Column</th>
+                            <th data-breakpoint="lg">Lastname</th>
+                            <th data-breakpoint="lg">Firstname</th>
+                            <th data-breakpoint="md">Title</th>
+                            <th data-breakpoint="md">Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Alii</td>
+                            <td>summum</td>
+                            <td>decus</td>
+                            <td>in</td>
+                            <td>carruchis</td>
+                            <td>solito</td>
+                            <td>altioribus</td>
+                            <td>et</td>
+                            <td>ambitioso</td>
+                            <td>vestium</td>
+                        </tr>
+                        <tr>
+                            <td>cultu</td>
+                            <td>ponentes</td>
+                            <td>sudant</td>
+                            <td>sub</td>
+                            <td>ponderibus</td>
+                            <td>lacernarum</td>
+                            <td>collis</td>
+                            <td>in</td>
+                            <td>insertas</td>
+                            <td>cingulis</td>
+                        </tr>
+                        <tr>
+                            <td>multiformes</td>
+                            <td>species</td>
+                            <td>liciorum</td>
+                            <td>luceant</td>
+                            <td>perspicue</td>
+                            <td>tunicaeque</td>
+                            <td>fimbriae</td>
+                            <td>ut</td>
+                            <td>longiores</td>
+                            <td>maximeque</td>
+                        </tr>
+                        <tr>
+                            <td>ipsis</td>
+                            <td>adnectunt</td>
+                            <td>nimia</td>
+                            <td>effigiatae</td>
+                            <td>tenuitate</td>
+                            <td>expandentes</td>
+                            <td>crebris</td>
+                            <td>eas</td>
+                            <td>agitationibus</td>
+                            <td>sinistra</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 class="border-bottom pb-3 mt-5 mb-4"><a name="usage" class="text-dark">Usage</a></h2>
+        
+                <p>
+                    You have to create a table with a <code>thead</code> and <code>tbody</code> section. 
+                    For the plugin to work you must specify the for each <code>th</code> contained in the <code>thead</code>
+                    section the <code>data-breakpoint</code> you want to apply.
+                </p>
+
+                <p>Below the list of possible breakpoint (you can mix different breakpoint in your <code>thead</code>) : </p>
+                <ul>
+                    <li><strong>xs:</strong> <= 480px</li>
+                    <li><strong>sm:</strong> <= 576px</li>
+                    <li><strong>md:</strong> <= 992px</li>
+                    <li><strong>lg:</strong> <= 1200px</li>
+                    <li><strong>xlg:</strong> <= 1400px</li>
+                </ul>
+
+                <pre class="p-0 m-0">
+                    <code class="html p-3">&lt;table class="table jsmartable"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th data-breakpoint="lg"&gt;ID&lt;/th&gt;
+            &lt;th data-breakpoint="lg"&gt;1 Column&lt;/th&gt;
+            &lt;th&gt;2 Column&lt;/th&gt;
+            &lt;th data-breakpoint="md"&gt;3 Column&lt;/th&gt;
+            &lt;th data-breakpoint="md"&gt;4 Column&lt;/th&gt;
+            &lt;th data-breakpoint="md"&gt;Lastname&lt;/th&gt;
+            &lt;th data-breakpoint="xs"&gt;Firstname&lt;/th&gt;
+            &lt;th data-breakpoint="xs"&gt;Title&lt;/th&gt;
+            &lt;th data-breakpoint="lg"&gt;Description&lt;/th&gt;
+            &lt;th&gt;Action&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        ...
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                </pre>
+
+
+                <h3>Via <code>jsmartable</code> class</h3>
+        
+                <p>Add the <code>jsmartable</code> class to your table to auto-initialize Jsmartable and 
+                configure each colunm to the specified breakpoint</p>
+        
+                <pre class="p-0 m-0">
+                        <code class="html p-3">&lt;table class="table jsmartable"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            ...
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        ...
+    &lt;/tbody&gt;
+&lt;/table&gt;</code>
+                    </pre>
+
+        
+                <h3>Via JavaScript</h3>
+
+                <pre class="p-0 m-0">
+                        <code class="javascript p-3">
+<span class="hljs-comment">// To style only selects with the my-custom-table class</span>
+ $(<span class="hljs-string">'.my-custom-table'</span>).jsmartable();
+                        </code>
+                    </pre>
+
+                <p>or</p>
+                
+                <pre class="p-0 m-0">
+                    <code class="js hljs javascript">
+<span class="hljs-comment">// To style all table</span>
+ $(<span class="hljs-string">'table'</span>).jsmartable();
+                    </code>
+                </pre>
+
+
+            <h2 class="border-bottom pb-3 mb-3"><a name="options" class="text-dark">Options</a></h2>
+
+            <p>You can customize some options if you want, below list of the possible options :</p>
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Option Name</th>
+                        <th>Possible value</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>allExpended</td>
+                        <td>Boolean <code>true</code> or <code>false</code></td>
+                        <td>allow to open all lines by default</td>
+                    </tr>
+                    <tr>
+                        <td>breakpoint</td>
+                        <td>
+                            <code>array</code>
+                            breakpoint: {<br/>
+                                <span class="ml-4">xs: <code>int</code> <small>480 by default</small></span>,<br/>
+                                <span class="ml-4">sm: <code>int</code> <small>576 by default</small></span>,<br/>
+                                <span class="ml-4">md: <code>int</code> <small>992 by default</small></span>,<br/>
+                                <span class="ml-4">lg: <code>int</code> <small>1200 by default</small></span>,<br/>
+                                <span class="ml-4">xlg: <code>int</code> <small>1400 by default</small></span>,<br/>
+                            }
+                        </td>
+                        <td>allow to change the breakpoint options</td>
+                    </tr>
+                    <tr>
+                        <td>iconPlus</td>
+                        <td>
+                            Code HTML, for exemple <code>&lt;i class="fas fa-plus text-info"&gt;&lt;/i&gt;</code>
+                        </td>
+                        <td>allow to change the plus icon</td>
+                    </tr>
+                    <tr>
+                        <td>iconMinus</td>
+                        <td>
+                                Code HTML, for exemple <code>&lt;i class="fas fa-minus text-info"&gt;&lt;/i&gt;</code>
+                        </td>
+                        <td>allow to change the minus icon</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+            <pre class="p-0 m-0">
+                    <code class="javascript p-3">
+<span class="hljs-comment">// To style only selects with the my-custom-table class</span>
+$(<span class="hljs-string">'.my-custom-table'</span>).jsmartable(
+    breakpoint: {
+        xs: 480,
+        sm: 576,
+        md: 992,
+        lg: 1200,
+        xlg: 1400,
+    },
+    iconPlus: '&lt;i class="fas fa-plus text-info"&gt;&lt;/i&gt;',
+    iconMinus: '&lt;i class="fas fa-minus text-info"&gt;&lt;/i&gt;',
+    allExpended: false
+);
+                    </code>
+                </pre>
+
+            <p>You can also open only some rows by default, for example the first row</p>
+            
+            <pre class="p-0 m-0">
+                    <code class="html p-3">
+    &lt;thead&gt;
+        &lt;tr&gt;
+            ...
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr data-opened="true"&gt;
+            ...
+        &lt;/tr&gt;
+            ...
+    &lt;/tbody&gt;
+&lt;/table&gt;
+                    </code>
+                </pre>
+
+        </div>
+
+
+
+        <div class="footer bg-light py-4">
+            <div class="container text-center">
+                <p class="text-muted m-0">Jsmartable is maintained by <a href="https://github.com/d4v1dm013/jsmartable">d4v1dm013</a>.</p>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+        <script src="jsmartable.js"></script>
+
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+    </body>
+</html>
