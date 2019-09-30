@@ -15,6 +15,9 @@ Several quick start options are availables:
 * Install with npm: **npm install jsmartable**
 * Install with yarn: **yarn add jsmartable**
 
+### Demo
+Demo : https://jsmartable.zestededev.com/
+
 ## Usage
 
 You have to create a table with a **thead** and **tbody** section. For the plugin to work you must specify the for each **th** contained in the **thead** section the **data-breakpoint** you want to apply.
