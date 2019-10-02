@@ -8,8 +8,8 @@ $.fn.jsmartable = function(options){
             lg: 1200,
             xlg: 1400,
         },
-        iconPlus: '<i class="fas fa-plus text-info"></i>',
-        iconMinus: '<i class="fas fa-minus text-danger"></i>',
+        iconPlus: '<i class="fa fa-plus text-info"></i>',
+        iconMinus: '<i class="fa fa-minus text-danger"></i>',
         allExpended: false
     }, options);
 

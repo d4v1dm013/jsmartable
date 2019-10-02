@@ -1,6 +1,6 @@
 {
     "name": "jsmartable",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Jquery free plugin to provide dynamic collapsable responsive table",
     "license": "MIT",
     "repository": "d4v1dm013/jsmartable",
@@ -16,11 +16,18 @@
       "jsmartable.js",
       "jsmartable.min.js"
     ],
+    "peerDependencies": {
+      "jquery": "1.9.1 - 3",
+      "bootstrap": ">=3.0.0",
+      "font-awesome": ">=4.7.0"
+    },
     "keywords": [
       "table",
       "responsive",
       "dynamic",
       "responsive table",
-      "collapse table"
+      "collapse table",
+      "jquery",
+      "jquery-plugin"
     ]
   }  
