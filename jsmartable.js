@@ -48,8 +48,6 @@ $.fn.jsmartable = function(options){
             //Get all rows contain in tbody
             var rows = table.find("> tbody > tr").not( ".jsmartable-row" );
 
-            //Refresh all col
-
             //loop all row to add a row responsive
             rows.each(function(index) {
 
@@ -58,7 +56,7 @@ $.fn.jsmartable = function(options){
 
                 var formated = row.data('formated');
 
-                //Gérer l'expension du tableau
+                //allow to expend automatically a row
                 var expanded = row.data('expanded');
 
                 var html = `<table class="jsmartable-subtable table table-bordered">
@@ -67,14 +65,20 @@ $.fn.jsmartable = function(options){
                 var totalElement = 0;
                 for(i=0;i<th.length;i++) {
 
-                    //current th information
+                    //get current th information
                     var currentTh = th.eq(i);
                     var columnPosition = currentTh.prop("cellIndex");
                     var breakpoint = currentTh.data('breakpoint');
 
-                    //current td information
-                    var currentTd = td.eq(columnPosition);
-                        
+                    //get current td information
+                    var currentTd = row.find(":nth-child("+(columnPosition)+")");
+                    
+                    //Allow to use a custom title instead of th
+                    var title = currentTd.data('title');
+                    if(typeof title == "undefined" || title == "") {
+                        title = currentTh.html();
+                    }
+
                     //Check if tf column exist at specified position
                     if(currentTd <= 0) {
                         console.log('TD Column ' + columnPosition + ' not found');
@@ -84,7 +88,7 @@ $.fn.jsmartable = function(options){
                     if(settings.breakpoint[breakpoint] != "undefined" && settings.breakpoint[breakpoint] >= screenSize) {
         
                         html += `<tr class="jsmartable-subrow">
-                            <td class="jsmartable-subcol" style="width:30%; background:#eee;">${currentTh.html()}</td>
+                            <td class="jsmartable-subcol" style="width:30%; background:#eee;">${title}</td>
                             <td class="jsmartable-subcol">${currentTd.html()}</td>
                         </tr>`;
 

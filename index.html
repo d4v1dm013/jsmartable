@@ -43,8 +43,8 @@
             <h1>JSmartable</h1>
             <p>Jquery free plugin to provide dynamic collapsable responsive table</p>
 
-            <a href="jsmartable.js" class="btn btn-outline-info btn-lg mb-4 text-light" target="_blank"><i class="fa fa-download"></i> Download v1.0.1</a><br/>
-            <a href="jsmartable.min.js" class="btn btn-outline-info btn-sm mb-4 text-light" target="_blank"><i class="fa fa-download"></i> minimified v1.0.1</a>
+            <a href="jsmartable.js" class="btn btn-outline-info btn-lg mb-4 text-light" target="_blank"><i class="fa fa-download"></i> Download v1.1.0</a><br/>
+            <a href="jsmartable.min.js" class="btn btn-outline-info btn-sm mb-4 text-light" target="_blank"><i class="fa fa-download"></i> minimified v1.1.0</a>
 
         </div>
 
@@ -112,7 +112,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Alii</td>
+                            <td data-title="Rewrite column title">Alii</td>
                             <td>summum</td>
                             <td>decus</td>
                             <td>in</td>
@@ -242,6 +242,8 @@
 
             <h2 class="border-bottom pb-3 mb-3"><a name="options" class="text-dark">Options</a></h2>
 
+            <h3 class="pb-3 mb-3"><a name="options" class="text-dark">Global options</a></h3>
+
             <p>You can customize some options if you want, below list of the possible options :</p>
 
             <table class="table table-bordered">
@@ -308,6 +310,8 @@ $(<span class="hljs-string">'.my-custom-table'</span>).jsmartable(
                     </code>
                 </pre>
 
+            <h3 class="pb-3 mb-3"><a name="options" class="text-dark">Rows options</a></h3>
+
             <p>You can also open only some rows by default, for example the first row</p>
             
             <pre class="p-0 m-0">
@@ -327,6 +331,30 @@ $(<span class="hljs-string">'.my-custom-table'</span>).jsmartable(
                     </code>
                 </pre>
 
+                <h3 class="pb-3 mb-3"><a name="options" class="text-dark">Columns options</a></h3>
+
+                <p>You can override the default title from the th column by a custom value. To do that, see below :</p>
+            
+                <pre class="p-0 m-0">
+                        <code class="html p-3">
+        &lt;thead&gt;
+            &lt;tr&gt;
+                ...
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;tr data-opened="true"&gt;
+                &lt;td data-title="Rewrite title"&gt;&lt;/td&gt;
+                &lt;td &gt;&lt;/td&gt;
+                &lt;td data-title="Rewrite title 2"&gt;&lt;/td&gt;
+                ...
+            &lt;/tr&gt;
+                ...
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+                        </code>
+                    </pre>
+
         </div>
 
 
@@ -341,6 +369,8 @@ $(<span class="hljs-string">'.my-custom-table'</span>).jsmartable(
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
         <script src="jsmartable.js"></script>
 
         <script>

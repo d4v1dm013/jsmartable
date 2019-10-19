@@ -85,6 +85,8 @@ or
 
 ## Options
 
+#### Global Options
+
 You can customize some options if you want, below list of the possible options :
 
 
@@ -121,6 +123,7 @@ $('.my-custom-table').jsmartable(
     allExpended: false
 );
 ```
+#### Rows Options
 
 You can also open only some rows by default, for example the first row
 
@@ -132,6 +135,28 @@ You can also open only some rows by default, for example the first row
     </thead>
     <tbody>
         <tr data-opened="true">
+            ...
+        </tr>
+            ...
+    </tbody>
+</table>
+```
+
+#### Columns Options
+
+You can override the default title from the th column by a custom value. To do that, see below :
+
+```html
+    <thead>
+        <tr>
+            ...
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td data-title="Rewrite title 1"></td>
+            <td></td>
+            <td data-title="Rewrite title "></td>
             ...
         </tr>
             ...
