@@ -1,4 +1,9 @@
-# v1.0.0 (2019-10-02)
+# v1.1.1 (2019-11-21)
+
+### Bug Fixes
+* Bug bad column
+
+# v1.1.0 (2019-10-02)
 
 ### Bug Fixes
 * Replace css icon class **fas** to **fa** for fontawesome 4 compatility

@@ -67,12 +67,13 @@ $.fn.jsmartable = function(options){
 
                     //get current th information
                     var currentTh = th.eq(i);
-                    var columnPosition = currentTh.prop("cellIndex");
+                    var columnPosition = currentTh.prop("cellIndex")+1;
                     var breakpoint = currentTh.data('breakpoint');
 
                     //get current td information
-                    var currentTd = row.find(":nth-child("+(columnPosition)+")");
+                    var currentTd = row.find("td:nth-child("+(columnPosition)+")");
                     
+
                     //Allow to use a custom title instead of th
                     var title = currentTd.data('title');
                     if(typeof title == "undefined" || title == "") {
